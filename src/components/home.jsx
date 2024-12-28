@@ -10,7 +10,9 @@ function Home(){
 
            <Navbar/>
  
+            
             <Outlet/>
+            
 
         </div>
     )

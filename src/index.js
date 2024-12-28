@@ -7,6 +7,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import Admin from './components/Admin';
 import User from './components/User';
+import AdminHome from './components/AdminHome';
 
 const router = createBrowserRouter([
          {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
                  {
                     path : '/user',
                     element : <User/>
+                 },
+                 {
+                   path : '/adminPage',
+                   element : <AdminHome/>
                  }
                  
             ]

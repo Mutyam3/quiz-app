@@ -1,0 +1,29 @@
+{
+  "admin": {
+    "username": "admin123",
+    "password": "admin123"
+  },
+  "users": [
+    {
+      "name": "mj",
+      "username": "dh",
+      "password": "nm",
+      "email": "nh@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "mj",
+      "username": "dh",
+      "password": "nm",
+      "email": "nh@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Mutyam Bhargav Reddy",
+      "username": "Mutyam",
+      "password": "Mutyam@3",
+      "email": "bhargavreddymutyam@gmail.com",
+      "id": 3
+    }
+  ]
+}
