@@ -1,6 +1,7 @@
 import React from 'react'
 import UserDetails from './UserDetails'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 function AdminHome(){
 
@@ -65,7 +66,7 @@ const [userCount, setUserCount] = React.useState(false)
 
             <div className='border border-dark p-5 d-flex justify-content-around w-100'>
                <button onClick = {()=>{setSteps(1)}}>Create User</button>
-               {allUsers && <button>Create Quiz</button>}
+               {allUsers && <Link to='/quizPage'><button>Create Quiz</button></Link>}
             </div>
 
             <br/>

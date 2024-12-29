@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap'
 import Admin from './components/Admin';
 import User from './components/User';
 import AdminHome from './components/AdminHome';
+import QuizPage from './components/QuizPage';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const router = createBrowserRouter([
          {
@@ -26,6 +29,10 @@ const router = createBrowserRouter([
                  {
                    path : '/adminPage',
                    element : <AdminHome/>
+                 },
+                 {
+                  path : '/quizPage',
+                  element : <QuizPage/>
                  }
                  
             ]

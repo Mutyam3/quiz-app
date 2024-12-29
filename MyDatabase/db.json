@@ -25,5 +25,30 @@
       "email": "bhargavreddymutyam@gmail.com",
       "id": 3
     }
-  ]
+  ],
+  "quiz": {
+    "quizName": "",
+    "formDescription": "",
+    "noOfQuestions": "",
+    "questions": [
+      {
+        "questionName": "what is your name ?",
+        "questionType": "checkbox",
+        "options": [
+          {
+            "option": "Bhargav"
+          },
+          {
+            "option": "Reddy"
+          },
+          {
+            "option": "Mutyam"
+          },
+          {
+            "option": "Mahesh"
+          }
+        ]
+      }
+    ]
+  }
 }
