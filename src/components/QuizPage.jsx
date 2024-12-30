@@ -1,25 +1,21 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function QuizPage() {
-  const [quiz, setQuiz] = React.useState({
+  const [quiz, setQuiz] = useState({
     quizName: '',
     formDescription: '',
     noOfQuestions: '',
     questions: [],
   });
 
-  const [question, setQuestion] = React.useState({
+  const [question, setQuestion] = useState({
     questionName: '',
     questionType: 'checkbox',
     options: [{ option: '' }],
   });
 
-  const handleOptionChange = (index, value) => {
-    const updatedOptions = [...question.options];
-    updatedOptions[index].option = value;
-    setQuestion({ ...question, options: updatedOptions });
-  };
+  const [allQuestions, setAllQuestions] = useState([]);
 
   const addOption = () => {
     setQuestion({
@@ -28,48 +24,92 @@ function QuizPage() {
     });
   };
 
-   async function addQuestion(){
-    setQuiz({
-      ...quiz,
-      questions: [...quiz.questions, { ...question }],
-    })
+  const handleOptionChange = (index, value) => {
+    const updatedOptions = [...question.options];
+    updatedOptions[index].option = value;
+    setQuestion({ ...question, options: updatedOptions });
+  };
 
-   await axios
-      .post('http://localhost:5000/quiz', quiz)
+  const getAllQuestions = () => {
+    axios
+      .get('http://localhost:5000/quiz')
       .then((res) => {
-        console.log('Response:', res.data);
+        console.log('Fetched Data:', res.data);
+        setAllQuestions(res.data); // Adjusted to store the full response if the structure doesn't match
       })
       .catch((err) => {
-        console.error('Error:', err);
+        console.error('Error fetching questions:', err);
       });
-
-    // Reset question state after adding
-    setQuestion({
-      questionName: '',
-      questionType: 'checkbox',
-      options: [{ option: '' }],
-    });
   };
+
+  const addQuestion = () => {
+    const updatedQuiz = { ...quiz };
+    updatedQuiz.questions.push(question);
+    console.log(updatedQuiz)
+    axios
+      .post('http://localhost:5000/quiz', updatedQuiz)
+      .then((res) => {
+        console.log('Added Quiz:', res.data);
+        getAllQuestions();
+
+
+      })
+      .catch((err) => {
+        console.error('Error adding quiz:', err);
+      });
+      
+      setQuestion({
+        questionName: '',
+        questionType: 'checkbox',
+        options: [{ option: '' }],
+      });
+  };
+
+  useEffect(() => {
+    getAllQuestions();
+  }, []);
 
   return (
     <div className="m-auto w-75 text-center">
       <div className="m-5 border border-dark rounded-3 p-5">
-        <input type="text" name="quizName" value={quiz.quizName} onChange={(e) => setQuiz({ ...quiz, quizName: e.target.value })} placeholder="Quiz Name"/>
+        <input
+          type="text"
+          name="quizName"
+          value={quiz.quizName}
+          onChange={(e) => setQuiz({ ...quiz, quizName: e.target.value })}
+          placeholder="Quiz Name"
+        />
         <br />
-        <input type="text" name="formDescription" value={quiz.formDescription}onChange={(e) => setQuiz({ ...quiz, formDescription: e.target.value })} placeholder="Form Description"/>
-        <input type="number" name="noOfQuestions" value={quiz.noOfQuestions} onChange={(e) =>setQuiz({ ...quiz, noOfQuestions: e.target.value })} placeholder="No. of Questions"/>
+        <input
+          type="text"
+          name="formDescription"
+          value={quiz.formDescription}
+          onChange={(e) =>
+            setQuiz({ ...quiz, formDescription: e.target.value })
+          }
+          placeholder="Form Description"
+        />
+        <input
+          type="number"
+          name="noOfQuestions"
+          value={quiz.noOfQuestions}
+          onChange={(e) =>
+            setQuiz({ ...quiz, noOfQuestions: e.target.value })
+          }
+          placeholder="No. of Questions"
+        />
       </div>
 
+      {/* display questions */}
       <div>
-        {quiz.questions.map((el, index) => (
+        {allQuestions?.map((el, index) => (
           <div key={index} className="m-5 border border-dark rounded-3">
             <div className="p-5 d-flex justify-content-between">
               <input type="text" name="question" value={el.questionName} readOnly />
-
               {el.options.map((option, optIndex) => (
                 <li key={optIndex}>
-                     <input type={el.questionType} />
-                    {option.option}
+                  <input type={el.questionType} name={el.questionName} />
+                  {option.option}
                 </li>
               ))}
             </div>
@@ -83,16 +123,12 @@ function QuizPage() {
             type="text"
             name="question"
             value={question.questionName}
-            onChange={(e) =>
-              setQuestion({ ...question, questionName: e.target.value })
-            }
+            onChange={(e) => setQuestion({ ...question, questionName: e.target.value })}
             placeholder="Question Name"
           />
           <select
             value={question.questionType}
-            onChange={(e) =>
-              setQuestion({ ...question, questionType: e.target.value })
-            }
+            onChange={(e) => setQuestion({ ...question, questionType: e.target.value })}
           >
             <option value="" disabled>
               Please Select
@@ -118,10 +154,11 @@ function QuizPage() {
           <button className="btn btn-secondary" onClick={addOption}>
             Add Option
           </button>
+
+          <button className="btn btn-primary" onClick={addQuestion}>
+            Add Question
+          </button>
         </div>
-        <button className="btn btn-primary" onClick={addQuestion}>
-          Add Question
-        </button>
       </div>
     </div>
   );

@@ -26,29 +26,13 @@
       "id": 3
     }
   ],
-  "quiz": {
-    "quizName": "",
-    "formDescription": "",
-    "noOfQuestions": "",
-    "questions": [
-      {
-        "questionName": "what is your name ?",
-        "questionType": "checkbox",
-        "options": [
-          {
-            "option": "Bhargav"
-          },
-          {
-            "option": "Reddy"
-          },
-          {
-            "option": "Mutyam"
-          },
-          {
-            "option": "Mahesh"
-          }
-        ]
-      }
-    ]
-  }
+  "quiz": [
+    {
+      "questionName": "what is html stands for ?",
+      "questionType": "checkbox",
+      "options": [
+
+      ]
+    }
+  ]
 }
