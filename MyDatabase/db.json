@@ -28,11 +28,11 @@
   ],
   "quiz": [
     {
-      "questionName": "what is html stands for ?",
-      "questionType": "checkbox",
-      "options": [
-
-      ]
+      "quizName": "",
+      "quizFormDescription": "",
+      "quizNoOfQuestions": "",
+      "quizQuestions": [],
+      "id": 1
     }
   ]
 }

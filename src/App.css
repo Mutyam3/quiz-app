@@ -35,3 +35,24 @@
     border : 2px solid black;
     
 }
+
+.InputField{
+    border : 0px;
+    border-bottom : 1px solid black;
+    outline: 0px;
+}
+
+.InputQuestion{
+    border : 0px;
+    outline : 0px;
+    margin: 8px;
+}
+
+.InputQuestion:hover{
+
+    border : 0px;
+    border-bottom: 1px solid black;
+    margin: 8px;
+
+
+}
