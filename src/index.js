@@ -11,6 +11,8 @@ import User from './components/User';
 import AdminHome from './components/AdminHome';
 import QuizPage from './components/QuizPage';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import CreateUser from './components/CreateUser';
+import QuizHome from './components/QuizHome';
 
 const router = createBrowserRouter([
          {
@@ -29,6 +31,15 @@ const router = createBrowserRouter([
                  {
                    path : '/adminPage',
                    element : <AdminHome/>
+                 },
+                 {
+                  path : '/quizHome',
+                  element : <QuizHome/>
+                 }
+                  ,
+                 {
+                  path : '/createUser',
+                  element : <CreateUser/>
                  },
                  {
                   path : '/quizPage',

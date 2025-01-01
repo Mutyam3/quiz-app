@@ -30,6 +30,10 @@
     height:40%
 }
 
+.table{
+   width: 50%;
+
+}
 
 .table th , tr td{
     border : 2px solid black;
@@ -53,6 +57,17 @@
     border : 0px;
     border-bottom: 1px solid black;
     margin: 8px;
+}
 
+.quizBox{
 
+    height:150px;
+    width : 200px;
+    
+}
+
+.adminPage{
+
+    /* border : 2px solid black; */
+    height: 91vh
 }

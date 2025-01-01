@@ -193,6 +193,13 @@ function QuizPage() {
                 </div>
                 <button onClick={addQuestion}>Add Question</button>
             </div>
+
+            <div className='m-5 d-flex justify-content-between border border-dark rounded-3 p-5'>
+                <button>Preview</button>
+                <button>Save</button>
+                <button>Publish</button>
+            </div>
+           
         </section>
     );
 }

@@ -5,25 +5,11 @@
   },
   "users": [
     {
-      "name": "mj",
-      "username": "dh",
-      "password": "nm",
-      "email": "nh@gmail.com",
-      "id": 1
-    },
-    {
-      "name": "mj",
-      "username": "dh",
-      "password": "nm",
-      "email": "nh@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "Mutyam Bhargav Reddy",
+      "name": "Mutyam Bhargav",
       "username": "Mutyam",
       "password": "Mutyam@3",
       "email": "bhargavreddymutyam@gmail.com",
-      "id": 3
+      "id": 1
     }
   ],
   "quiz": [
@@ -34,5 +20,10 @@
       "quizQuestions": [],
       "id": 1
     }
+  ],
+
+
+  "allQuizes"  : [
+
   ]
 }

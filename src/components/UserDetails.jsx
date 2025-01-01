@@ -1,11 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function UserDetails({users}){
+function UserDetails({users, editUser, deleteUser}){
 
-
+     const navigate = useNavigate()
 
 
     return (
+        <>
         
             <table className='table'>
                <thead>
@@ -29,15 +31,19 @@ function UserDetails({users}){
                                     <td>{user.password}</td>
                                     <td>{user.email}</td>
                                     <td><button className='btn btn-primary'>View</button></td>
-                                    <td><button className='btn btn-primary'>Edit</button>
-                                        <button className='btn btn-danger'>Delete</button>
+                                    <td><button className='btn btn-primary' onClick = {()=>{editUser(user)}}>Edit</button>
+                                        <button className='btn btn-danger' onClick = {()=>{deleteUser(user)}}>Delete</button>
                                     </td>
                                </tr>
                          })
                     }
                </tbody>
             </table>
-        
+
+            <div>
+                <button onClick={()=>{navigate('/adminPage')}}>Previous</button>
+            </div>
+            </> 
     )
 }
 
