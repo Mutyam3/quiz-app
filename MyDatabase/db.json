@@ -14,16 +14,227 @@
   ],
   "quiz": [
     {
-      "quizName": "",
-      "quizFormDescription": "",
-      "quizNoOfQuestions": "",
-      "quizQuestions": [],
+      "quizName": "HTML Quiz",
+      "quizFormDescription": "This Quiz is good",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [
+        {
+          "questionName": "what is html stands for ?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Hyper Text Markup Language"
+            },
+            {
+              "option": "Hyper Text Markup "
+            },
+            {
+              "option": "Height Text Markup "
+            },
+            {
+              "option": "Hyper Text Mashup Language"
+            }
+          ],
+          "id": "whatishtmlstandsfor?"
+        },
+        {
+          "questionName": "Is the span element is block or inline element",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Block Element"
+            },
+            {
+              "option": "Inline Element"
+            },
+            {
+              "option": "Both a and b"
+            },
+            {
+              "option": "None"
+            }
+          ],
+          "id": "Isthespanelementisblockorinlineelement"
+        },
+        {
+          "questionName": "what is your name?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Mutyam"
+            },
+            {
+              "option": "Bhargav"
+            },
+            {
+              "option": "Reddy"
+            },
+            {
+              "option": "Mutyam Bhargav Reddy"
+            }
+          ],
+          "id": "whatisyourname?"
+        },
+        {
+          "questionName": "what is your age",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "21"
+            },
+            {
+              "option": "22"
+            },
+            {
+              "option": "23"
+            },
+            {
+              "option": "24"
+            }
+          ],
+          "id": "whatisyourage"
+        },
+        {
+          "questionName": "have you married ?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "no"
+            },
+            {
+              "option": "yes"
+            },
+            {
+              "option": "others"
+            }
+          ],
+          "id": "haveyoumarried?"
+        }
+      ],
       "id": 1
     }
   ],
-
-
-  "allQuizes"  : [
-
+  "allQuizes": [
+    {
+      "quizName": "HTML Quiz",
+      "quizFormDescription": "This Quiz is good",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [
+        {
+          "questionName": "what is html stands for ?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Hyper Text Markup Language"
+            },
+            {
+              "option": "Hyper Text Markup "
+            },
+            {
+              "option": "Height Text Markup "
+            },
+            {
+              "option": "Hyper Text Mashup Language"
+            }
+          ],
+          "id": "whatishtmlstandsfor?"
+        },
+        {
+          "questionName": "Is the span element is block or inline element",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Block Element"
+            },
+            {
+              "option": "Inline Element"
+            },
+            {
+              "option": "Both a and b"
+            },
+            {
+              "option": "None"
+            }
+          ],
+          "id": "Isthespanelementisblockorinlineelement"
+        },
+        {
+          "questionName": "what is your name?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Mutyam"
+            },
+            {
+              "option": "Bhargav"
+            },
+            {
+              "option": "Reddy"
+            },
+            {
+              "option": "Mutyam Bhargav Reddy"
+            }
+          ],
+          "id": "whatisyourname?"
+        },
+        {
+          "questionName": "what is your age",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "21"
+            },
+            {
+              "option": "22"
+            },
+            {
+              "option": "23"
+            },
+            {
+              "option": "24"
+            }
+          ],
+          "id": "whatisyourage"
+        },
+        {
+          "questionName": "have you married ?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "no"
+            },
+            {
+              "option": "yes"
+            },
+            {
+              "option": "others"
+            }
+          ],
+          "id": "haveyoumarried?"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "quizName": "HTML Quiz",
+      "quizFormDescription": "This Quiz is good",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [],
+      "id": 2
+    },
+    {
+      "quizName": "HTML Quiz",
+      "quizFormDescription": "This Quiz is good",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [],
+      "id": 3
+    },
+    {
+      "quizName": "HTML Quiz",
+      "quizFormDescription": "This Quiz is good",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [],
+      "id": 4
+    }
   ]
 }

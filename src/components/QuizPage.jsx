@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios'
 import Questions from './Questions';
+import Preview from './Preview';
 
 
 function QuizPage() {
+    const [step, setStep] = React.useState(1)
     const [quiz, setQuiz] = React.useState({
         quizName: '',
         quizFormDescription: '',
@@ -13,7 +15,7 @@ function QuizPage() {
 
     const [questions, setQuestions] = React.useState({
         questionName: '',
-        questionType: '',
+        questionType: 'radio',
         options: [{ option: '' }],
     });
 
@@ -49,7 +51,7 @@ function QuizPage() {
       
         setQuestions({
             questionName: '',
-            questionType: '',
+            questionType: 'radio',
             options: [{ option: '' }],
         });
     }
@@ -66,7 +68,6 @@ function QuizPage() {
     }
 
    async function deleteQuestion(ind){
-      alert(ind)
 
       let updatedQuestions = [...quizQuestions];
       updatedQuestions = updatedQuestions.filter((el)=>{
@@ -92,6 +93,31 @@ function QuizPage() {
 
     }
 
+    function preview()
+    {
+       setStep(2)
+    }
+
+    function save(){
+        var temp = {...quiz}
+
+        axios.post('http://localhost:5000/allQuizes', {...quiz}).then((res)=>{
+            console.log('saved::',res.data)
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+        axios.put('http://localhost:5000/quiz', {...quiz}).then((res)=>{
+           setQuiz({...quiz})
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
+
+    function publish(){
+        alert('publish')
+    }
+
     React.useEffect(()=>{
 
           getAllQuestions()
@@ -101,7 +127,11 @@ function QuizPage() {
 
     return (
         <section className="border border-dark p-5">
-            <div className="border border-dark rounded-3 p-5 m-5 text-center">
+
+            {
+                step == 1 &&  <>
+                
+                <div className="border border-dark rounded-3 p-5 m-5 text-center">
                 <input
                     type="text"
                     name="quizName"
@@ -195,11 +225,25 @@ function QuizPage() {
             </div>
 
             <div className='m-5 d-flex justify-content-between border border-dark rounded-3 p-5'>
-                <button>Preview</button>
-                <button>Save</button>
-                <button>Publish</button>
+                 <button onClick = {()=>{preview()}}>Preview</button>
+                <button onClick = {()=>{save()}}>Save</button>
+                <button onClick={()=>{publish()}}>Publish</button>
             </div>
            
+            <div>
+
+
+            </div>
+                </>
+            }
+
+            {
+
+                step == 2 && <>
+                        <Preview quizQuestions = {quizQuestions} setStep={setStep}/>
+                    </>
+            }
+            
         </section>
     );
 }
