@@ -42,7 +42,7 @@ function QuizPage() {
       setQuiz({ ...quiz, quizQuestions: updatedQuestions });
 
      
-      const response = await axios.put(`http://localhost:5000/quiz/${1}`, {
+      const response = await axios.put(`http://localhost:5000/quiz`, {
           ...quiz,
           quizQuestions: updatedQuestions, 
       });
@@ -59,8 +59,8 @@ function QuizPage() {
     function getAllQuestions(){
 
       axios.get('http://localhost:5000/quiz').then((res)=>{
-        console.log(res.data[0].quizQuestions)
-        setQuizQuestions(res.data[0].quizQuestions)
+        console.log(res.data.quizQuestions)
+        setQuizQuestions(res.data.quizQuestions)
       }).catch((err)=>{
         console.log(err)
       })
@@ -83,7 +83,7 @@ function QuizPage() {
       setQuiz({ ...quiz, quizQuestions: updatedQuestions });
 
      
-      const response = await axios.put(`http://localhost:5000/quiz/${1}`, {
+      const response = await axios.put(`http://localhost:5000/quiz`, {
           ...quiz,
           quizQuestions: updatedQuestions, 
       });
@@ -99,7 +99,7 @@ function QuizPage() {
     }
 
     function save(){
-        var temp = {...quiz}
+       
 
         axios.post('http://localhost:5000/allQuizes', {...quiz}).then((res)=>{
             console.log('saved::',res.data)
@@ -107,8 +107,15 @@ function QuizPage() {
             console.log(err)
         })
 
-        axios.put('http://localhost:5000/quiz', {...quiz}).then((res)=>{
-           setQuiz({...quiz})
+        const temp = {
+            quizName: '',
+            quizFormDescription: '',
+            quizNoOfQuestions: '',
+            quizQuestions: [],
+        }
+        axios.put(`http://localhost:5000/quiz`, temp).then((res)=>{
+            console.log(res.data)
+           setQuiz(res.data)
         }).catch((err)=>{
             console.log(err)
         })
