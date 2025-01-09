@@ -116,6 +116,7 @@ function QuizPage() {
         axios.put(`http://localhost:5000/quiz`, temp).then((res)=>{
             console.log(res.data)
            setQuiz(res.data)
+           setQuizQuestions(res.data.quizQuestions)
         }).catch((err)=>{
             console.log(err)
         })

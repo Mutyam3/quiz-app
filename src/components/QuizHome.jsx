@@ -27,14 +27,20 @@ function QuizHome(){
 
              </div>
 
-             <div className='border border-dark p-4 m-5 w-75 rounded-3'>
+             <div className='border border-dark p-4 m-5 d-flex flex-wrap  gap-5 w-75 rounded-3'>
 
                   {
                         allQuizes?.map((el)=>{
                               return (
-                                   <section className=' border border-dark w-25 p-5'>
+                                   
+                                   <Link to={`/publishQuiz/${el.id}`} className='border border-dark w-25 p-5 rounded-3' style={{textDecoration:'none', color:'black'}}>
+                                   <section>
                                         <h4>{el.quizName}</h4>
+
                                    </section>
+                                   </Link>
+                                   
+                                   
                               )
                         })
                   }
@@ -44,7 +50,7 @@ function QuizHome(){
              </div>
 
              <h3 className='m-5'>Recent Quizes</h3>
-             <div className='border border-dark p-5 m-5  rounded-3'>
+             <div className='border border-dark p-5 m-5 d-flex rounded-3'>
                   {
                         allQuizes?.map((el)=>{
                               return (

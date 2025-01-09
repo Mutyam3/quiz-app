@@ -13,6 +13,7 @@ import QuizPage from './components/QuizPage';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import CreateUser from './components/CreateUser';
 import QuizHome from './components/QuizHome';
+import PublishQuiz from './components/PublishQuiz';
 
 const router = createBrowserRouter([
          {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
                  {
                   path : '/quizPage',
                   element : <QuizPage/>
+                 }
+                 ,{
+                   path : '/publishQuiz/:id',
+                   element : <PublishQuiz/>
                  }
                  
             ]

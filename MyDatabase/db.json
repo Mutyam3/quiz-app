@@ -139,7 +139,79 @@
         }
       ],
       "id": 2
+    },
+    {
+      "quizName": "JavaScript Quiz",
+      "quizFormDescription": "This Quiz is Medium",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [
+        {
+          "questionName": "what is your age",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "21"
+            },
+            {
+              "option": "22"
+            },
+            {
+              "option": "23"
+            },
+            {
+              "option": "24"
+            }
+          ],
+          "id": "whatisyourage"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "quizName": "Python Quiz",
+      "quizFormDescription": "Python is Everywhere",
+      "quizNoOfQuestions": "10",
+      "quizQuestions": [
+        {
+          "questionName": "What is Programming language is easy ",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Python"
+            },
+            {
+              "option": "Java"
+            },
+            {
+              "option": "Javascript"
+            },
+            {
+              "option": "Ruby"
+            }
+          ],
+          "id": "WhatisProgramminglanguageiseasy"
+        },
+        {
+          "questionName": "Who is the Founder of Python?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Mutyam"
+            },
+            {
+              "option": "Bhargav"
+            },
+            {
+              "option": "Goss"
+            },
+            {
+              "option": "Reddy"
+            }
+          ],
+          "id": "WhoistheFounderofPython?"
+        }
+      ],
+      "id": 4
     }
-  
   ]
 }
