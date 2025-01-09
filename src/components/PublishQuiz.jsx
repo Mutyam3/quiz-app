@@ -8,6 +8,7 @@ function PublishQuiz(){
     console.log(id)
 
     const [quiz, setQuiz] = React.useState({})
+    const [users, setUsers] = React.useState([])
 
     React.useEffect(()=>{
 
@@ -20,7 +21,16 @@ function PublishQuiz(){
               console.log(err)
         })
 
-        },[])
+        axios.get('http://localhost:5000/users').then((res)=>{
+            console.log(res.data)
+
+             setUsers(res.data)
+
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+     },[])
 
 
         function publishQuiz(){
@@ -43,7 +53,7 @@ function PublishQuiz(){
 
 
                {
-               quiz?.quizQuestions.map((el,ind)=>{
+              quiz &&  quiz.quizQuestions && quiz.quizQuestions.map((el,ind)=>{
                      return (
                         <div className='text-start m-5 border border-dark rounded-3 p-5' key = {`${el.questionName.slice(0,10)}`}>
                              <p>{el.questionName}</p> 
