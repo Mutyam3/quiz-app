@@ -14,6 +14,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import CreateUser from './components/CreateUser';
 import QuizHome from './components/QuizHome';
 import PublishQuiz from './components/PublishQuiz';
+import UserHome from './components/userHome';
+import userQuiz from './components/userQuiz';
+import UserQuiz from './components/userQuiz';
 
 const router = createBrowserRouter([
          {
@@ -49,7 +52,21 @@ const router = createBrowserRouter([
                  ,{
                    path : '/publishQuiz/:id',
                    element : <PublishQuiz/>
-                 }
+                 },
+                 {
+                     path : '/userHome/:id',
+                     element : <UserHome/>,
+                     // children: [
+                     //    {
+                     //       path : '/userHome/:userid',
+                     //       element: <UserHome/>
+                     //    }
+                     // ]
+                 },
+                 {
+                      path : '/userQuiz/:id',
+                      element : <UserQuiz/>
+                 } 
                  
             ]
          },

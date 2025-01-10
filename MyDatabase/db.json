@@ -5,11 +5,24 @@
   },
   "users": [
     {
-      "name": "Mutyam Bhargav",
+      "name": "Mutyam Bhargav Reddy",
       "username": "Mutyam",
       "password": "Mutyam@3",
       "email": "bhargavreddymutyam@gmail.com",
-      "id": 1
+      "id": 1,
+      "quizId": [
+        "1"
+      ]
+    },
+    {
+      "name": "Mahesh",
+      "username": "Mahesh",
+      "password": "Mahesh@3",
+      "email": "Mahesh@gmail.com",
+      "id": 2,
+      "quizId": [
+        "1"
+      ]
     }
   ],
   "quiz": {

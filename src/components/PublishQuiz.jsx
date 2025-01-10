@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import {  useNavigate, useParams} from 'react-router-dom'
 
 function PublishQuiz(){
 
@@ -9,6 +9,7 @@ function PublishQuiz(){
 
     const [quiz, setQuiz] = React.useState({})
     const [users, setUsers] = React.useState([])
+    const navigate = useNavigate()
 
     React.useEffect(()=>{
 
@@ -33,10 +34,40 @@ function PublishQuiz(){
      },[])
 
 
-        function publishQuiz(){
-             alert('hi')
+     function publishQuiz() {
+       
+        const updatedUsers = users.map((user) => {
             
-        }
+            const updatedUser = { ...user };
+            
+            updatedUser.quizId = updatedUser.quizId || []; 
+            if (!updatedUser.quizId.includes(id)) {
+                updatedUser.quizId.push(id); 
+            }
+            return updatedUser;
+        });
+    
+        updatedUsers.forEach((updatedUser) => {
+            axios
+                .put(`http://localhost:5000/users/${updatedUser.id}`, updatedUser)
+                .then((res) => {
+                    console.log(`User ${updatedUser.id} updated successfully:`, res.data);
+                })
+                .catch((err) => {
+                    console.error(`Error updating user ${updatedUser.id}:`, err);
+                });
+        });
+    
+        console.log('Updated users:', updatedUsers);
+    }
+
+    function previous(){
+
+         navigate('/quizHome')
+
+    }
+    
+    
 
 
     return (
@@ -52,7 +83,7 @@ function PublishQuiz(){
                </div>
 
 
-               {
+            {
               quiz &&  quiz.quizQuestions && quiz.quizQuestions.map((el,ind)=>{
                      return (
                         <div className='text-start m-5 border border-dark rounded-3 p-5' key = {`${el.questionName.slice(0,10)}`}>
@@ -73,9 +104,13 @@ function PublishQuiz(){
                })
              }
 
-             <div>
+             <div className='p-5 d-flex justify-content-between'>
+
+                    <button onClick = {previous}>Previous</button>
 
                     <button onClick = {publishQuiz}>Publish</button>
+
+                   
 
              </div>
 
