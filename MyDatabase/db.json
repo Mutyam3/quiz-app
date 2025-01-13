@@ -33,198 +33,212 @@
   },
   "allQuizes": [
     {
-      "quizName": "HTML Quiz",
-      "quizFormDescription": "This Quiz is good",
+      "quizName": "HTML QUIZ",
+      "quizFormDescription": "Basic Level ",
       "quizNoOfQuestions": "10",
       "quizQuestions": [
         {
-          "questionName": "what is html stands for ?",
+          "questionName": "  What tag is used to define a hyperlink in HTML?",
           "questionType": "radio",
           "options": [
             {
-              "option": "Hyper Text Markup Language"
+              "option": " <link>"
             },
             {
-              "option": "Hyper Text Markup "
+              "option": " <a>"
             },
             {
-              "option": "Height Text Markup "
+              "option": " <href>"
             },
             {
-              "option": "Hyper Text Mashup Language"
+              "option": "<hyper>"
             }
           ],
-          "id": "whatishtmlstandsfor?"
+          "questionAnswer": "<link>",
+          "id": "WhattagisusedtodefineahyperlinkinHTML?"
         },
         {
-          "questionName": "Is the span element is block or inline element",
+          "questionName": "Which tag creates the largest heading in HTML?",
           "questionType": "radio",
           "options": [
             {
-              "option": "Block Element"
+              "option": "<h6>"
             },
             {
-              "option": "Inline Element"
+              "option": "<h1>"
             },
             {
-              "option": "Both a and b"
+              "option": "<header> "
             },
             {
-              "option": "None"
+              "option": " <head>"
             }
           ],
-          "id": "Isthespanelementisblockorinlineelement"
+          "questionAnswer": "<h1>",
+          "id": "WhichtagcreatesthelargestheadinginHTML?"
         },
         {
-          "questionName": "what is your name?",
+          "questionName": "What is the purpose of the <br> tag?",
           "questionType": "radio",
           "options": [
             {
-              "option": "Mutyam"
+              "option": "Start a new paragraph "
             },
             {
-              "option": "Bhargav"
+              "option": "Break line "
             },
             {
-              "option": "Reddy"
+              "option": "Bold text "
             },
             {
-              "option": "Mutyam Bhargav Reddy"
+              "option": "Create a list"
             }
           ],
-          "id": "whatisyourname?"
+          "questionAnswer": "Break line",
+          "id": "Whatisthepurposeofthe<br>tag?"
         },
         {
-          "questionName": "what is your age",
+          "questionName": "How do you add an image to a webpage?",
           "questionType": "radio",
           "options": [
             {
-              "option": "21"
+              "option": " <img src=\"url\">"
             },
             {
-              "option": "22"
+              "option": " <src=\"url\">"
             },
             {
-              "option": "23"
+              "option": " <image=\"url\">"
             },
             {
-              "option": "24"
+              "option": "<media src=\"url\">"
             }
           ],
-          "id": "whatisyourage"
+          "questionAnswer": "<img src=\"url\">",
+          "id": "Howdoyouaddanimagetoawebpage?"
         },
         {
-          "questionName": "have you married ?",
+          "questionName": "Which HTML tag is used to define a table cell?",
           "questionType": "radio",
           "options": [
             {
-              "option": "no"
+              "option": "<table>"
             },
             {
-              "option": "yes"
+              "option": "<td>  "
             },
             {
-              "option": "others"
+              "option": "<th> "
+            },
+            {
+              "option": "<tr>"
             }
           ],
-          "id": "haveyoumarried?"
+          "questionAnswer": "<td>",
+          "id": "WhichHTMLtagisusedtodefineatablecell?"
+        },
+        {
+          "questionName": "What does the <ul> tag represent?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Ordered list"
+            },
+            {
+              "option": "Unordered list"
+            },
+            {
+              "option": "Underlined list"
+            },
+            {
+              "option": "Universal list"
+            }
+          ],
+          "questionAnswer": "Unordered list",
+          "id": "Whatdoesthe<ul>tagrepresent?"
+        },
+        {
+          "questionName": "Which tag is used to make text bold?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "<strong>"
+            },
+            {
+              "option": "<bold>"
+            },
+            {
+              "option": "<b>"
+            },
+            {
+              "option": "<em>"
+            }
+          ],
+          "questionAnswer": "<b>",
+          "id": "Whichtagisusedtomaketextbold?"
+        },
+        {
+          "questionName": " How is a comment inserted in an HTML document?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "<!-- comment -->"
+            },
+            {
+              "option": " // comment //"
+            },
+            {
+              "option": "/* comment */"
+            },
+            {
+              "option": "# comment"
+            }
+          ],
+          "questionAnswer": "<!-- comment -->",
+          "id": "HowisacommentinsertedinanHTMLdocument?"
+        },
+        {
+          "questionName": "  What HTML element is used for a top-level heading?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "<h1>"
+            },
+            {
+              "option": "<heading>"
+            },
+            {
+              "option": "<head>"
+            },
+            {
+              "option": "<header>"
+            }
+          ],
+          "questionAnswer": " <h1>",
+          "id": "WhatHTMLelementisusedforatop-levelheading?"
+        },
+        {
+          "questionName": "Which attribute specifies the URL in an <a> tag for linking?",
+          "questionType": "radio",
+          "options": [
+            {
+              "option": "Link"
+            },
+            {
+              "option": "Href"
+            },
+            {
+              "option": "Src"
+            },
+            {
+              "option": "Url"
+            }
+          ],
+          "questionAnswer": "Href",
+          "id": "WhichattributespecifiestheURLinan<a>tagforlinking?"
         }
       ],
       "id": 1
-    },
-    {
-      "quizName": "CSS Quiz",
-      "quizFormDescription": "This Quiz is hard",
-      "quizNoOfQuestions": "10",
-      "quizQuestions": [
-        {
-          "questionName": "What is CSS stands for?",
-          "questionType": "radio",
-          "options": [
-            {
-              "option": "Cascading style Sheet"
-            },
-            {
-              "option": "Computer Style Sheet"
-            }
-          ],
-          "id": "WhatisCSSstandsfor?"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "quizName": "JavaScript Quiz",
-      "quizFormDescription": "This Quiz is Medium",
-      "quizNoOfQuestions": "10",
-      "quizQuestions": [
-        {
-          "questionName": "what is your age",
-          "questionType": "radio",
-          "options": [
-            {
-              "option": "21"
-            },
-            {
-              "option": "22"
-            },
-            {
-              "option": "23"
-            },
-            {
-              "option": "24"
-            }
-          ],
-          "id": "whatisyourage"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "quizName": "Python Quiz",
-      "quizFormDescription": "Python is Everywhere",
-      "quizNoOfQuestions": "10",
-      "quizQuestions": [
-        {
-          "questionName": "What is Programming language is easy ",
-          "questionType": "radio",
-          "options": [
-            {
-              "option": "Python"
-            },
-            {
-              "option": "Java"
-            },
-            {
-              "option": "Javascript"
-            },
-            {
-              "option": "Ruby"
-            }
-          ],
-          "id": "WhatisProgramminglanguageiseasy"
-        },
-        {
-          "questionName": "Who is the Founder of Python?",
-          "questionType": "radio",
-          "options": [
-            {
-              "option": "Mutyam"
-            },
-            {
-              "option": "Bhargav"
-            },
-            {
-              "option": "Goss"
-            },
-            {
-              "option": "Reddy"
-            }
-          ],
-          "id": "WhoistheFounderofPython?"
-        }
-      ],
-      "id": 4
     }
   ]
 }

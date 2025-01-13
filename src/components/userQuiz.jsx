@@ -5,7 +5,7 @@ function UserQuiz({ userQuiz, setStep }) {
 
   function submitQuiz() {
     console.log('Submitted Quiz Values:', quizValues);
-    alert('Quiz submitted successfully!');
+    
   }
 
   function handleValues(e) {

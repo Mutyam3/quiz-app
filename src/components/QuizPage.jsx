@@ -17,6 +17,7 @@ function QuizPage() {
         questionName: '',
         questionType: 'radio',
         options: [{ option: '' }],
+        questionAnswer : ''
     });
 
     const [quizQuestions, setQuizQuestions] = React.useState([])
@@ -122,9 +123,7 @@ function QuizPage() {
         })
     }
 
-    function publish(){
-        alert('publish')
-    }
+  
 
     React.useEffect(()=>{
 
@@ -229,13 +228,22 @@ function QuizPage() {
                    </>
                   }
                 </div>
+                <input
+                        type="text"
+                        name="questionName"
+                        value={questions.questionAnswer}
+                        onChange={(e) => setQuestions({ ...questions, questionAnswer: e.target.value })}
+                        placeholder="Answer"
+                        className='InputField'
+                    />
+                <br/><br/>
                 <button onClick={addQuestion}>Add Question</button>
             </div>
 
             <div className='m-5 d-flex justify-content-between border border-dark rounded-3 p-5'>
                  <button onClick = {()=>{preview()}}>Preview</button>
                 <button onClick = {()=>{save()}}>Save</button>
-                <button onClick={()=>{publish()}}>Publish</button>
+                
             </div>
            
             <div>
