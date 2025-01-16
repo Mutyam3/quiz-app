@@ -61,7 +61,7 @@ function UserQuiz({ userQuiz, setStep }) {
           </button>
 
           <button onClick={submitQuiz} className="btn btn-primary">
-            Submit
+            Submit Quiz
           </button>
         </div>
       </section>
