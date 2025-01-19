@@ -47,7 +47,7 @@ function UserQuiz({ userQuiz, setStep }) {
             </div>
           ))
         ) : (
-          <p className="text-center">No questions available for this quiz.</p>
+          <p className="text-center">No questions available for this quiz</p>
         )}
 
         <div className="p-5 d-flex justify-content-between">
@@ -61,7 +61,7 @@ function UserQuiz({ userQuiz, setStep }) {
           </button>
 
           <button onClick={submitQuiz} className="btn btn-primary">
-            Submit Quiz
+            Submit Quiz 
           </button>
         </div>
       </section>
